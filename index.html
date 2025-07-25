@@ -7,17 +7,17 @@
 </head>
 <body>
 
-  <!-- HeyGen snippet with your actual share token and KB -->
+  <!-- HeyGen snippet you just copied (new account, 10‑credit token) -->
   <script>
   !function(window){
     const host = "https://labs.heygen.com",
-          url  = host + "/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJKdW5lX0hSX3B1YmxpYyIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3YzLzc0NDQ3YTI3ODU5YTQ1NmM5NTVlMDFmMjFlZjE4MjE2XzQ1NjIwL3ByZXZpZXdfdGFsa18xLndlYnAiLCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6ImRlbW8tMSJ9&kb=June_HR_public&inIFrame=1",
-          clientWidth = document.body.clientWidth,
-          wrapDiv     = document.createElement("div");
+          url  = host + "/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJKdW5lX0hSX3B1YmxpYyIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3YzLzc0NDQ3YTI3ODU5YTQ1NmM5NTVlMDFmMjFlZjE4MjE2XzQ1NjIwL3ByZXZpZXdfdGFsa18xLndlYnAiLCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6ImU0NTZiYTY2MTQ1ZjRjNTJiNjRhNGU2NmUwZWI0NzgwIiwidXNlcm5hbWUiOiIzNTBjNDdmN2MxNWE0NmIyYmVlMjMzOTQ3MzRhNjU4MCJ9&kb=June_HR_public&inIFrame=1",
+          clientWidth   = document.body.clientWidth,
+          wrapDiv       = document.createElement("div");
     wrapDiv.id = "heygen-streaming-embed";
 
-    const container  = document.createElement("div");
-    container.id       = "heygen-streaming-container";
+    const container = document.createElement("div");
+    container.id = "heygen-streaming-container";
 
     const stylesheet = document.createElement("style");
     stylesheet.innerHTML = `
@@ -43,7 +43,7 @@
       #heygen-streaming-embed.expand {
         ${clientWidth < 540
           ? "height: 266px; width: 96%; left: 50%; transform: translateX(-50%);"
-          : "height: 366px; width: calc(366px * 16 / 9);"}
+          : "height: 366px; width: calc(366px * 16/9);"}
         border: 0;
         border-radius: 8px;
       }
@@ -60,10 +60,10 @@
 
     const iframe = document.createElement("iframe");
     iframe.allowFullscreen = false;
-    iframe.title           = "Streaming Embed";
-    iframe.role            = "dialog";
-    iframe.allow           = "microphone";
-    iframe.src             = url;
+    iframe.title         = "Streaming Embed";
+    iframe.role          = "dialog";
+    iframe.allow         = "microphone";
+    iframe.src           = url;
 
     let visible = false, initial = false;
     window.addEventListener("message", (e) => {
